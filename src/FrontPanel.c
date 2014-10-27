@@ -1,4 +1,6 @@
 #include "FrontPanel.h"
+#include "led.h"
+#include "button.h"
 
 void FrontPanel_Update() {
   if(Button_IsPressed(3)) {
