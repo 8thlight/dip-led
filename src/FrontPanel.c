@@ -1,20 +1,17 @@
 #include "FrontPanel.h"
+#include "Led.h"
 
 static button_func_t ButtonIsPressed;
-static led_on_func_t LedTurnOn;
-static led_off_func_t LedTurnOff;
 
-void FrontPanel_Create(button_func_t isPressed, led_on_func_t ledOn, led_off_func_t ledOff) {
+void FrontPanel_Create(button_func_t isPressed) {
   ButtonIsPressed = isPressed;
-  LedTurnOff = ledOff;
-  LedTurnOn = ledOn;
 }
 
 void FrontPanel_Update() {
   if(ButtonIsPressed(3)) {
-    LedTurnOn(STATUS_LED);
+    Led_TurnOn(STATUS_LED);
   }
   else {
-    LedTurnOff(STATUS_LED);
+    Led_TurnOff(STATUS_LED);
   }
 }
