@@ -1,5 +1,7 @@
 #include "unity.h"
 #include "FrontPanel.h"
+#include "Led.h"
+#include "Button.h"
 
 void setUp(void)
 {
@@ -11,5 +13,5 @@ void tearDown(void)
 
 void test_module_generator_needs_to_be_implemented(void)
 {
-	TEST_IGNORE_MESSAGE("Implement me!");
+  FrontPanel_Update();
 }
