@@ -1,10 +1,23 @@
 #include "unity.h"
 #include "FrontPanel.h"
-#include "Led.h"
-#include "Button.h"
+
+void TestLedOff(uint16_t pin)
+{
+}
+
+void TestLedOn(uint16_t pin)
+{
+}
+
+int TestButtonIsPresed(uint16_t pin)
+{
+  return 0;
+}
+
 
 void setUp(void)
 {
+  FrontPanel_Create(&TestButtonIsPresed, &TestLedOn, &TestLedOff);
 }
 
 void tearDown(void)
